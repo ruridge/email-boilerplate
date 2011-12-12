@@ -119,74 +119,70 @@ Email on Acid - http://www.emailonacid.com/blog/details/C18/doctype_-_the_black_
 		h2 { font-size:18px }
 		p { font-size:14px; }
 		
-		
-
-		
 	</style>
 </head>
 <body>
 	<!-- Wrapper/Container Table: Use a wrapper table to control the width and the background color consistently of your email. Use this approach instead of setting attributes on the body tag. -->
 	<table id="backgroundTable" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
-	<tr>
-		<td> 
-					 
-		<!-- Tables are the most common way to format your email consistently. Set your table widths inside cells and in most cases reset cellpadding, cellspacing, and border to zero. Use nested tables as a way to space effectively in your message. -->
-		<table id="templateContainer" cellpadding="0" cellspacing="0" border="0" align="center">
-			<tr>
-				<td width="600" valign="top">
-				
-					<table id="templateHeader" cellpadding="0" cellspacing="0" border="0">
-                        <tr>
-                            <td width="600" valign="top">
-                                Header
-                            </td>
-                        </tr>
-					</table>
-				
-				</td>
-			</tr>
-            <tr>
-            	<td width="600" valign="top">
-                
-               		<table id="templateBody" cellpadding="0" cellspacing="0" border="0">
-                        <tr>
-                            <td width="600" valign="top">
-							
-								<!-- Part 2 of the Yahoo h2 - h6 color fix: Add a span to apply inline color style to, styles in header during production. -->
-								<h2>Title Text</h2>
-							
-								<!-- Yahoo Link color fix updated: Simply bring your link styling inline. -->
-								<a href="http://htmlemailboilerplate.com" target ="_blank" title="Styling Links" style="color: orange; text-decoration: none;">Coloring Links appropriately</a>
+		<tr>
+			<td> 
+						 
+			<!-- Tables are the most common way to format your email consistently. Set your table widths inside cells and reset cellpadding, cellspacing, and border to zero. Use nested tables as a way to space effectively in your message. -->
+				<table id="templateContainer" cellpadding="0" cellspacing="0" border="0" align="center">
+					<tr>
+						<td width="600" valign="top">
+						
+							<table id="templateHeader" cellpadding="0" cellspacing="0" border="0">
+								<tr>
+									<td width="600" valign="top">
+										Header
+									</td>
+								</tr>
+							</table>
+						
+						</td>
+					</tr>
+					<tr>
+						<td width="600" valign="top">
+						
+							<table id="templateBody" cellpadding="0" cellspacing="0" border="0">
+								<tr>
+									<td width="600" valign="top">
+									
+										<!-- Part 2 of the Yahoo h2 - h6 color fix: Add a span to apply inline color style to, styles in header during production. -->
+										<h2>Title Text</h2>
+									
+										<!-- Yahoo Link color fix updated: Simply bring your link styling inline. -->
+										<a href="http://url" target ="_blank" title="Styling Links" style="color: orange; text-decoration: none;">Coloring Links appropriately</a>
 
-								<!-- Gmail/Hotmail image display fix -->
-								<img class="image_fix" src="full path to image" alt="Your alt text" title="Your title text" width="x" height="x" />
-								
-                            </td>
-                        </tr>
-					</table>
-                
-                </td>
-            </tr>
-			<tr>
-				<td width="600" valign="top">
+										<!-- Gmail/Hotmail image display fix -->
+										<img class="image_fix" src="img/placeholder.jpg" alt="Your alt text" title="Your title text" width="300" height="200" />
+										
+									</td>
+								</tr>
+							</table>
+						
+						</td>
+					</tr>
+					<tr>
+						<td width="600" valign="top">
+						
+							<table id="templateFooter" cellpadding="0" cellspacing="0" border="0">
+								<tr>
+									<td width="600" valign="top">
+										Footer
+									</td>
+								</tr>
+							</table>
+							
+						</td>
+					</tr>
+				</table>
+				<!-- End example table -->
 				
-					<table id="templateFooter" cellpadding="0" cellspacing="0" border="0">
-                        <tr>
-                            <td width="600" valign="top">
-								Footer
-                            </td>
-                        </tr>
-					</table>
-					
-				</td>
-			</tr>
-		</table>
-		
-		<!-- End example table -->
-		
-		</td>
-	</tr>
-	</table>  
+			</td>
+		</tr>
+	</table>
 	<!-- End of wrapper table -->
 </body>
 </html>
