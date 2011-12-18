@@ -21,35 +21,39 @@ Email on Acid - http://www.emailonacid.com/blog/details/C18/doctype_-_the_black_
 	<style type="text/css">
 	
 		/* =============================================================================
-		   Email client bug fixes - Do not change or remove. Do not put inline
+		   Email client bug fixes and reset - Do not change or remove. Do not put inline
 		   ========================================================================== */
- 
-		.ExternalClass { width:100%; } /* Forces Hotmail to display emails at full width */
-		 
+		   
+		/***********
+		Originally based on The MailChimp Reset from Fabio Carneiro, MailChimp User Experience Design
+		More info and templates on Github: https://github.com/mailchimp/Email-Blueprints
+		http://www.mailchimp.com & http://www.fabio-carneiro.com
+		***********/  
+		/* Client-specific Styles */
+		#outlook a {padding:0;} /* Force Outlook to provide a "view in browser" menu link. */
+		
+		body{width:100% !important; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; margin:0; padding:0;} 
+		/* Prevent Webkit and Windows Mobile platforms from changing default font sizes, while not breaking desktop design. */
+		/* Resets all body margins and padding to 0 for good measure */
+		
+		.ExternalClass {width:100%;} /* Force Hotmail to display emails at full width */
+		
 		.ExternalClass,
 		.ExternalClass p,
 		.ExternalClass span,
 		.ExternalClass font,
 		.ExternalClass td,
-		.ExternalClass div { line-height: 100%; } /* Forces Hotmail to display normal line spacing, here is more on that: http://www.emailonacid.com/forum/viewthread/43/ */
-		 
-		body { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; } /* Prevents Webkit and Windows Mobile platforms from changing default font sizes. */
-		 
-		body { margin:0; padding:0; } /* Resets all body margins and padding to 0 for good measure */
-		 
-		table td { border-collapse:collapse; } /*This resolves the Outlook 07, 10, and Gmail td padding issue.  Heres more info: http://www.ianhoar.com/2008/04/29/outlook-2007-borders-and-1px-padding-on-table-cells and: http://www.campaignmonitor.com/blog/post/3392/1px-borders-padding-on-table-cells-in-outlook-07 */
+		.ExternalClass div {line-height: 100%;} /* Force Hotmail to display normal line spacing.  More on that: http://www.emailonacid.com/forum/viewthread/43/ */
 		
+		#backgroundTable {margin:0; padding:0; width:100% !important; line-height: 100% !important;}
+		/* End reset */
+		 
 		
-		
-		/* =============================================================================
-		   Some sensible defaults - Do not change or remove. Do not put inline
-		   -These should be ovewritten inline if they need changing.
-		   ========================================================================== */
-		#backgroundTable { margin:0; padding:0; width:100% !important; line-height:100% !important; }
+
 		 
 		h1, h2, h3, h4, h5, h6 { color: black; line-height: 100%; }  /* This CSS will overwrite Hotmails default css and make your headings appear consistant with Gmail. From there, you can overwrite your styles inline if needed.  */
 
-		a, a:link { color:#2A5DB0; text-decoration: underline; }  /* This is the embedded CSS link color for Gmail.  This will overwrite Hotmail and Yahoo Beta's embedded link colors and make it consistent with Gmail.  You must overwrite this color inline */
+		a, a:link { color:#2A5DB0; text-decoration: underline; }  /* This is the embedded CSS link color for Gmail. This will overwrite Hotmail and Yahoo Beta's embedded link colors and make it consistent with Gmail. You must overwrite this color inline */
 		
 		
 		
@@ -57,7 +61,7 @@ Email on Acid - http://www.emailonacid.com/blog/details/C18/doctype_-_the_black_
 		   Basic styles - You can edit these - Do not put inline
 		   ========================================================================== */
 		
-		p { margin:0 0 1em; padding:0; margin-bottom:1em; }
+		p { margin-top:0; margin-left:0; margin-right:0; margin-bottom:1em; padding:0; }
 				/* This sets a clean slate for all clients EXCEPT Gmail.
 			   From there it forces you to do all of your spacing inline during the development process.
 			   Be sure to stick to margins because paragraph padding is not supported by Outlook 2007/2010
@@ -73,15 +77,6 @@ Email on Acid - http://www.emailonacid.com/blog/details/C18/doctype_-_the_black_
 		/*** EMBEDDED CSS NOTES ***
                  
 				1.) Be aware that Gmail will not read any of your embedded CSS
-				 
-				2.) Although I have seen the !important priority used in other examples, it is not necessary. 
-				If you use "!important" you can no longer overwrite your styles inline which is required for Gmail.
-		 
-				3.) The Android does not support "class" declarations outside of the media query.  Here is more info on that:
-				http://www.emailonacid.com/blog/the_android_mail_app_and_css_class_declarations/
-				 
-				4.) You might want to consider duplicating your embedded CSS after the closing body tag for Yahoo! Mail in
-				IE7 & 8.
 				
 				5.) You must REMOVE ALL COMMENTS from the live version to avoide the spam box.
 				 
@@ -92,15 +87,14 @@ Email on Acid - http://www.emailonacid.com/blog/details/C18/doctype_-_the_black_
 		   Email client bug fixes - Do not change or remove - Put inline
 		   ========================================================================== */
 		
-		.image_fix { display:block; }
+		table td { border-collapse:collapse; } /* This resolves the Outlook 07, 10, and Gmail td padding issue. Heres more info: http://www.ianhoar.com/2008/04/29/outlook-2007-borders-and-1px-padding-on-table-cells and: http://www.campaignmonitor.com/blog/post/3392/1px-borders-padding-on-table-cells-in-outlook-07 */
 		
 		h1, h2, h3, h4, h5, h6, p { margin-top:0; }
-		
-		h2 span { color }
 		
 		/* Some sensible defaults for images */
 		img { outline:none; text-decoration:none; -ms-interpolation-mode: bicubic; } 
 		a img { border:none; } 
+		.image_fix { display:block; }
 		
 		/* =============================================================================
 		   Primary styles - Put inline - http://premailer.dialect.ca/
