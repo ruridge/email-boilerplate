@@ -5,7 +5,7 @@ Use these code examples as a guideline for formatting your HTML email. There are
 DO NOT COPY OVER ANY HTML OR CSS COMMENTS / INSTRUCTIONS WITH THE CODE to your live email as some spam filters will block your email.
 
 ==================================================== -->
-<!-- Using XHTML strict because it is used by Gmail and Hotmail.
+<!-- Using XHTML strict while building because it is used by Gmail and Hotmail. Must be removed before adding to PureResponse.
 More info/Reference on doctypes in email: 
 Campaign Monitor - http://www.campaignmonitor.com/blog/post/3317/correct-doctype-to-use-in-html-email/
 Email on Acid - http://www.emailonacid.com/blog/details/C18/doctype_-_the_black_sheep_of_html_email_design
@@ -95,23 +95,14 @@ Email on Acid - http://www.emailonacid.com/blog/details/C18/doctype_-_the_black_
 		img { outline:none; text-decoration:none; -ms-interpolation-mode: bicubic; } 
 		a img { border:none; } 
 		.image_fix { display:block; }
+		.empty { font-size:1px; line-height:1px; }
 		
 		/* =============================================================================
 		   Primary styles - Put inline - http://premailer.dialect.ca/
 		   Author: 
 		   ========================================================================== */
 		
-		/* Some nice defaults to get you started - You may change these */
-		body { background:#ffffff; }
 		
-		h1, h2, h3, h4, h5, h6, p { font-family:Arial, Helvetica, sans-serif; text-align:left; margin-bottom:1em; }
-		
-		/** Hotmail header color reset: Hotmail replaces your header color styles with a green color on H2, H3, H4, H5, and H6 tags. In this example, the color is reset to black. Replace with your choice of color. The !important is really what is overriding Hotmail's styling. **/
-		h2, h3, h4, h5, h6 {color: black !important;}
-		
-		h1 { font-size:21px; }
-		h2 { font-size:18px }
-		p { font-size:14px; }
 		
 	</style>
 </head>
@@ -142,9 +133,6 @@ Email on Acid - http://www.emailonacid.com/blog/details/C18/doctype_-_the_black_
 							<table id="templateBody" cellpadding="0" cellspacing="0" border="0">
 								<tr>
 									<td width="600" valign="top">
-									
-										<!-- Part 2 of the Yahoo h2 - h6 color fix: Add a span to apply inline color style to, styles in header during production. -->
-										<h2>Title Text</h2>
 									
 										<!-- Yahoo Link color fix updated: Simply bring your link styling inline. -->
 										<a href="http://url" target ="_blank" title="Styling Links" style="color: orange; text-decoration: none;">Coloring Links appropriately</a>
