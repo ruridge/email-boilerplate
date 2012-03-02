@@ -29,8 +29,6 @@ Email on Acid - http://www.emailonacid.com/blog/details/C18/doctype_-_the_black_
 		http://www.mailchimp.com & http://www.fabio-carneiro.com
 		***********/  
 		/* Client-specific Styles */
-		#outlook a {padding:0;} /* Force Outlook to provide a "view in browser" menu link. */
-		
 		body{width:100% !important; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; margin:0; padding:0;} 
 		/* Prevent Webkit and Windows Mobile platforms from changing default font sizes, while not breaking desktop design. */
 		/* Resets all body margins and padding to 0 for good measure */
@@ -91,9 +89,11 @@ Email on Acid - http://www.emailonacid.com/blog/details/C18/doctype_-_the_black_
 		h1, h2, h3, h4, h5, h6, p { margin-top:0; }
 		
 		/* Some sensible defaults for images */
-		img { outline:none; text-decoration:none; -ms-interpolation-mode: bicubic; } 
-		a img { border:none; } 
-		.image_fix { display:block; }
+		img { outline:none; text-decoration:none; }
+		a img { border:none; } /* This removes border from link images */
+		.image_fix { display:block; } /* Gmail and Hotmail add unwanted space below images when not using an IE browser. You may not want all images to be block so apply the "image_fix" class when yo need the fix */
+
+
 		.empty { font-size:1px; line-height:1px; }
 		
 		/* =============================================================================
