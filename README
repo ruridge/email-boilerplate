@@ -1,4 +1,4 @@
-The XHTML Email Boilerplate is meant as a starting point for any HTML Email Template. It contains fixes for many common browser bugs and a table structure 600px wide. I have also included examples for links, headings (h2-h6 hotmail colour fix) and images all of which can cause problems if not treated correctly.
+The XHTML Email Boilerplate is meant as a starting point for any HTML Email Template. It contains fixes for many common browser bugs and a default 600px wide centred layout.
 
 Many thanks to:
 Sean Powell - HTML Email Boilerplate: http://htmlemailboilerplate.com/
