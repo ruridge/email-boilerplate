@@ -22,54 +22,46 @@ Email on Acid - http://www.emailonacid.com/blog/details/C18/doctype_-_the_black_
 		/* =============================================================================
 		   Email client bug fixes and reset - Do not change or remove. Do not put inline
 		   ========================================================================== */
-		   
-		/***********
-		Originally based on The MailChimp Reset from Fabio Carneiro, MailChimp User Experience Design
-		More info and templates on Github: https://github.com/mailchimp/Email-Blueprints
-		http://www.mailchimp.com & http://www.fabio-carneiro.com
-		***********/  
-		/* Client-specific Styles */
-		body{width:100% !important; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; margin:0; padding:0;} 
-		/* Prevent Webkit and Windows Mobile platforms from changing default font sizes, while not breaking desktop design. */
-		/* Resets all body margins and padding to 0 for good measure */
+
+		/* Client-specific Styles
+		========================= */
+
+		/* "text-size-adjust:100%" prevents Webkit and Windows Mobile platforms from changing default font sizes, while not breaking desktop design. */
+		/* Reset all body margins and padding to 0 for good measure */
+		body{ width:100% !important; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; margin:0; padding:0; }
 		
-		.ExternalClass {width:100%;} /* Force Hotmail to display emails at full width */
+		/* Force Hotmail to display emails at full width */
+		.ExternalClass {width:100%;}
 		
+		/* Force Hotmail to display normal line spacing.  More on that: http://www.emailonacid.com/forum/viewthread/43/ */
 		.ExternalClass,
 		.ExternalClass p,
 		.ExternalClass span,
 		.ExternalClass font,
 		.ExternalClass td,
-		.ExternalClass div {line-height: 100%;} /* Force Hotmail to display normal line spacing.  More on that: http://www.emailonacid.com/forum/viewthread/43/ */
+		.ExternalClass div { line-height:100%; }
 		
-		#backgroundTable {margin:0; padding:0; width:100% !important; line-height: 100% !important;}
+		#backgroundTable { margin:0; padding:0; width:100% !important; line-height: 100% !important; }
 		/* End reset */
-		 
-		
 
-		 
-		h1, h2, h3, h4, h5, h6 { color: black; line-height: 100%; }  /* This CSS will overwrite Hotmails default CSS and make your headings appear consistent with Gmail. From there, you can overwrite your styles inline if needed.  */
+		/* This CSS will overwrite Hotmails default CSS and make your headings appear consistent with Gmail. From there, you can overwrite your styles inline if needed.  */
+		h1, h2, h3, h4, h5, h6 { color:black !important; line-height:100%; }
+		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {color: blue !important;}
 
-		a, a:link { color:#2A5DB0; text-decoration: underline; }  /* This is the embedded CSS link colour for Gmail. This will overwrite Hotmail and Yahoo Beta's embedded link colours and make it consistent with Gmail. You must overwrite this color inline */
-		
-		
-		
-		/* =============================================================================
-		   Basic styles - You can edit these - Do not put inline
-		   ========================================================================== */
-		
+		/* This is the embedded CSS link colour for Gmail. This will overwrite Hotmail and Yahoo Beta's embedded link colours and make it consistent with Gmail. You must overwrite this color inline */
+		a { color:#2A5DB0; text-decoration:underline; }
+
 		p { margin-top:0; margin-left:0; margin-right:0; margin-bottom:1em; padding:0; }
-				/* This sets a clean slate for all clients EXCEPT Gmail.
-			   From there it forces you to do all of your spacing inline during the development process.
-			   Be sure to stick to margins because paragraph padding is not supported by Outlook 2007/2010
-			   Remember: Hotmail does not support "margin" nor the "margin-top" properties.
-			   Stick to "margin-bottom", "margin-left", "margin-right" in order to control spacing
-			   It also doesn't hurt to set the inline top-margin to "0" for consistency in Gmail for every instance of a
-			   paragraph tag (see our paragraph example within the body of this template)
-		
-			   Another option:  Use double BRs instead... of paragraphs */
-		
-		
+		/* This sets a clean slate for all clients EXCEPT Gmail.
+		From there it forces you to do all of your spacing inline during the development process.
+		Be sure to stick to margins because paragraph padding is not supported by Outlook 2007/2010
+		Remember: Hotmail does not support "margin" nor the "margin-top" properties.
+		Stick to "margin-bottom", "margin-left", "margin-right" in order to control spacing
+		It also doesn't hurt to set the inline top-margin to "0" for consistency in Gmail for every instance of a
+		paragraph tag (see our paragraph example within the body of this template)
+
+		Another option:  Use double BRs instead... of paragraphs */
+
 		
 		/*** EMBEDDED CSS NOTES ***
                  
@@ -78,13 +70,14 @@ Email on Acid - http://www.emailonacid.com/blog/details/C18/doctype_-_the_black_
 				5.) You must REMOVE ALL COMMENTS from the live version to avoid the spam box.
 				 
 		*** END EMBEDDED CSS NOTES ***/
-		
+
 		
 		/* =============================================================================
 		   Email client bug fixes - Do not change or remove - Put inline - http://beaker.mailchimp.com/inline-css
 		   ========================================================================== */
 		
-		table td { border-collapse:collapse; } /* This resolves the Outlook 07, 10, and Gmail td padding issue. Here's more info: http://www.ianhoar.com/2008/04/29/outlook-2007-borders-and-1px-padding-on-table-cells and: http://www.campaignmonitor.com/blog/post/3392/1px-borders-padding-on-table-cells-in-outlook-07 */
+		/* This resolves the Outlook 07, 10, and Gmail td padding issue. Here's more info: http://www.ianhoar.com/2008/04/29/outlook-2007-borders-and-1px-padding-on-table-cells and: http://www.campaignmonitor.com/blog/post/3392/1px-borders-padding-on-table-cells-in-outlook-07 */
+		table td { border-collapse:collapse; }
 		
 		h1, h2, h3, h4, h5, h6, p { margin-top:0; }
 		
