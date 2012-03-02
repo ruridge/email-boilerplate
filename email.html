@@ -23,9 +23,6 @@ Email on Acid - http://www.emailonacid.com/blog/details/C18/doctype_-_the_black_
 		   Email client bug fixes and reset - Do not change or remove. Do not put inline
 		   ========================================================================== */
 
-		/* Client-specific Styles
-		========================= */
-
 		/* "text-size-adjust:100%" prevents Webkit and Windows Mobile platforms from changing default font sizes, while not breaking desktop design. */
 		/* Reset all body margins and padding to 0 for good measure */
 		body{ width:100% !important; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; margin:0; padding:0; }
@@ -41,8 +38,8 @@ Email on Acid - http://www.emailonacid.com/blog/details/C18/doctype_-_the_black_
 		.ExternalClass td,
 		.ExternalClass div { line-height:100%; }
 		
+		/* sets up a full width background table with and removes margin / padding */
 		#backgroundTable { margin:0; padding:0; width:100% !important; line-height: 100% !important; }
-		/* End reset */
 
 		/* This CSS will overwrite Hotmails default CSS and make your headings appear consistent with Gmail. From there, you can overwrite your styles inline if needed.  */
 		h1, h2, h3, h4, h5, h6 { color:black !important; line-height:100%; }
@@ -51,16 +48,8 @@ Email on Acid - http://www.emailonacid.com/blog/details/C18/doctype_-_the_black_
 		/* This is the embedded CSS link colour for Gmail. This will overwrite Hotmail and Yahoo Beta's embedded link colours and make it consistent with Gmail. You must overwrite this color inline */
 		a { color:#2A5DB0; text-decoration:underline; }
 
+		/* This sets a clean slate for all clients EXCEPT Gmail. */
 		p { margin-top:0; margin-left:0; margin-right:0; margin-bottom:1em; padding:0; }
-		/* This sets a clean slate for all clients EXCEPT Gmail.
-		From there it forces you to do all of your spacing inline during the development process.
-		Be sure to stick to margins because paragraph padding is not supported by Outlook 2007/2010
-		Remember: Hotmail does not support "margin" nor the "margin-top" properties.
-		Stick to "margin-bottom", "margin-left", "margin-right" in order to control spacing
-		It also doesn't hurt to set the inline top-margin to "0" for consistency in Gmail for every instance of a
-		paragraph tag (see our paragraph example within the body of this template)
-
-		Another option:  Use double BRs instead... of paragraphs */
 
 		
 		/*** EMBEDDED CSS NOTES ***
@@ -93,19 +82,30 @@ Email on Acid - http://www.emailonacid.com/blog/details/C18/doctype_-_the_black_
 		   Primary styles - Put inline - http://beaker.mailchimp.com/inline-css
 		   Author: 
 		   ========================================================================== */
+
+
+
+		/* =============================================================================
+		   Optional - Adaptive Mobile Styles - Keep in header and do not put inline or remove entirety.
+		   These will be applied to iOS mobile devices and Android mobile devices using the native mail app. It will not work in the Android Gmail app.
+		   Author: 
+		   ========================================================================== */
+		@media only screen and (max-width: 480px) {
+			body[yahoo] p {color:#00c;} /* Example using the yahoo-fix =====REMOVE BEFOR MAKING LIVE===== */
+		}
 		
 		
 		
 	</style>
 </head>
-<body>
+<body yahoo="fix">
 	<!-- Wrapper/Container Table: Use a wrapper table to control the width and the background colour consistently of your email. Use this approach instead of setting attributes on the body tag. -->
 	<table id="backgroundTable" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
 		<tr>
 			<td> 
 						 
 			<!-- Tables are the most common way to format your email consistently. Set your table widths inside cells and reset cellpadding, cellspacing, and border to zero. Use nested tables as a way to space effectively in your message. -->
-				<table id="templateContainer" cellpadding="0" cellspacing="0" border="0" align="center">
+				<table id="templateContainer" width="600" cellpadding="0" cellspacing="0" border="0" align="center">
 					<tr>
 						<td width="600" valign="top">
 						
