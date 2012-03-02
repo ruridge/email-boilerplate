@@ -1,6 +1,6 @@
 <!-- ===================================================
 
-Use these code examples as a guideline for formatting your HTML email. There are two main areas in the template: 1. The header (head) area of the document. You will find global CSS styles which should be moved inline where indicated. The first three sections of styles in the header should not be brought inline, the rest should. 2. The body section contains a skeleton table layout 600px wide and centered. Examples for how to implement headers, images and links correctly are also supplied.
+Use these code examples as a guideline for formatting your HTML email. There are two main areas in the template: 1. The header (head) area of the document. You will find global CSS styles which should be moved inline where indicated. The first three sections of styles in the header should not be brought inline, the rest should. 2. The body section contains a skeleton table layout 600px wide and centred. Examples for how to implement headers, images and links correctly are also supplied.
 
 DO NOT COPY OVER ANY HTML OR CSS COMMENTS / INSTRUCTIONS WITH THE CODE to your live email as some spam filters will block your email.
 
@@ -16,8 +16,7 @@ Email on Acid - http://www.emailonacid.com/blog/details/C18/doctype_-_the_black_
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-	<title>Your Message Subject or Title</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<style type="text/css">
 	
 		/* =============================================================================
@@ -51,9 +50,9 @@ Email on Acid - http://www.emailonacid.com/blog/details/C18/doctype_-_the_black_
 		
 
 		 
-		h1, h2, h3, h4, h5, h6 { color: black; line-height: 100%; }  /* This CSS will overwrite Hotmails default css and make your headings appear consistant with Gmail. From there, you can overwrite your styles inline if needed.  */
+		h1, h2, h3, h4, h5, h6 { color: black; line-height: 100%; }  /* This CSS will overwrite Hotmails default CSS and make your headings appear consistent with Gmail. From there, you can overwrite your styles inline if needed.  */
 
-		a, a:link { color:#2A5DB0; text-decoration: underline; }  /* This is the embedded CSS link color for Gmail. This will overwrite Hotmail and Yahoo Beta's embedded link colors and make it consistent with Gmail. You must overwrite this color inline */
+		a, a:link { color:#2A5DB0; text-decoration: underline; }  /* This is the embedded CSS link colour for Gmail. This will overwrite Hotmail and Yahoo Beta's embedded link colours and make it consistent with Gmail. You must overwrite this color inline */
 		
 		
 		
@@ -67,7 +66,7 @@ Email on Acid - http://www.emailonacid.com/blog/details/C18/doctype_-_the_black_
 			   Be sure to stick to margins because paragraph padding is not supported by Outlook 2007/2010
 			   Remember: Hotmail does not support "margin" nor the "margin-top" properties.
 			   Stick to "margin-bottom", "margin-left", "margin-right" in order to control spacing
-			   It also doesnt hurt to set the inline top-margin to "0" for consistancy in Gmail for every instance of a
+			   It also doesn't hurt to set the inline top-margin to "0" for consistency in Gmail for every instance of a
 			   paragraph tag (see our paragraph example within the body of this template)
 		
 			   Another option:  Use double BRs instead... of paragraphs */
@@ -78,16 +77,16 @@ Email on Acid - http://www.emailonacid.com/blog/details/C18/doctype_-_the_black_
                  
 				1.) Be aware that Gmail will not read any of your embedded CSS
 				
-				5.) You must REMOVE ALL COMMENTS from the live version to avoide the spam box.
+				5.) You must REMOVE ALL COMMENTS from the live version to avoid the spam box.
 				 
 		*** END EMBEDDED CSS NOTES ***/
 		
 		
 		/* =============================================================================
-		   Email client bug fixes - Do not change or remove - Put inline
+		   Email client bug fixes - Do not change or remove - Put inline - http://beaker.mailchimp.com/inline-css
 		   ========================================================================== */
 		
-		table td { border-collapse:collapse; } /* This resolves the Outlook 07, 10, and Gmail td padding issue. Heres more info: http://www.ianhoar.com/2008/04/29/outlook-2007-borders-and-1px-padding-on-table-cells and: http://www.campaignmonitor.com/blog/post/3392/1px-borders-padding-on-table-cells-in-outlook-07 */
+		table td { border-collapse:collapse; } /* This resolves the Outlook 07, 10, and Gmail td padding issue. Here's more info: http://www.ianhoar.com/2008/04/29/outlook-2007-borders-and-1px-padding-on-table-cells and: http://www.campaignmonitor.com/blog/post/3392/1px-borders-padding-on-table-cells-in-outlook-07 */
 		
 		h1, h2, h3, h4, h5, h6, p { margin-top:0; }
 		
@@ -98,7 +97,7 @@ Email on Acid - http://www.emailonacid.com/blog/details/C18/doctype_-_the_black_
 		.empty { font-size:1px; line-height:1px; }
 		
 		/* =============================================================================
-		   Primary styles - Put inline - http://premailer.dialect.ca/
+		   Primary styles - Put inline - http://beaker.mailchimp.com/inline-css
 		   Author: 
 		   ========================================================================== */
 		
@@ -107,7 +106,7 @@ Email on Acid - http://www.emailonacid.com/blog/details/C18/doctype_-_the_black_
 	</style>
 </head>
 <body>
-	<!-- Wrapper/Container Table: Use a wrapper table to control the width and the background color consistently of your email. Use this approach instead of setting attributes on the body tag. -->
+	<!-- Wrapper/Container Table: Use a wrapper table to control the width and the background colour consistently of your email. Use this approach instead of setting attributes on the body tag. -->
 	<table id="backgroundTable" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
 		<tr>
 			<td> 
@@ -134,8 +133,8 @@ Email on Acid - http://www.emailonacid.com/blog/details/C18/doctype_-_the_black_
 								<tr>
 									<td width="600" valign="top">
 									
-										<!-- Yahoo Link color fix updated: Simply bring your link styling inline. -->
-										<a href="http://url" target ="_blank" title="Styling Links" style="color: orange; text-decoration: none;">Coloring Links appropriately</a>
+										<!-- Yahoo Link colour and dotted underline fix: Bring your link styling inline and add a span with inline colour style. -->
+										<a href="http://url" target ="_blank" title="Styling Links" style="color:orange; text-decoration:none;"><span style="color:orange">Coloring Links appropriately</span></a>
 
 										<!-- Gmail/Hotmail image display fix -->
 										<img class="image_fix" src="img/placeholder.jpg" alt="Your alt text" title="Your title text" width="300" height="200" />
