@@ -51,6 +51,13 @@ Email on Acid - http://www.emailonacid.com/blog/details/C18/doctype_-_the_black_
 		/* This sets a clean slate for all clients EXCEPT Gmail. */
 		p { margin-top:0; margin-left:0; margin-right:0; margin-bottom:1em; padding:0; }
 
+		/* Stop Yahoo! from adding it's own styles to some links. Change these values to your default link style Here's more info: http://www.emailonacid.com/blog/details/C13/yahoo_shortcuts_are_baaaaaaaack */
+		span.yshortcuts { color:orange; background-color:none; border:none;}
+		span.yshortcuts:hover,
+		span.yshortcuts:active,
+		span.yshortcuts:focus {color:orange; background-color:none; border:none;}
+		
+
 		
 		/*** EMBEDDED CSS NOTES ***
                  
@@ -127,7 +134,7 @@ Email on Acid - http://www.emailonacid.com/blog/details/C18/doctype_-_the_black_
 									<td width="600" valign="top">
 									
 										<!-- Yahoo Link colour and dotted underline fix: Bring your link styling inline and add a span with inline colour style. -->
-										<a href="http://url" target ="_blank" title="Styling Links" style="color:orange; text-decoration:none;"><span style="color:orange">Coloring Links appropriately</span></a>
+										<a href="http://url" target ="_blank" title="Styling Links" style="text-decoration:none; color:orange;">Colouring Links Example<a>
 
 										<!-- Gmail/Hotmail image display fix -->
 										<img class="image_fix" src="img/placeholder.jpg" alt="Your alt text" title="Your title text" width="300" height="200" />
